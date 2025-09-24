@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class lab1 {
+    public static void main(String[] args){
+        //Creation of variables
+        Scanner scan = new Scanner(System.in);
+        String name;
+        int salary;
+        double yearly_salary;
+        double loan_principal;
+        double loan_interest;
+        double new_principal;
+        int age;
+        boolean eligible_for_relief;
+        boolean loan_paid_off;
+
+        //start of the actual program
+        System.out.println("[Budgeting System]");
+        System.out.print("Enter your name: ");
+        name = scan.nextLine();
+        System.out.print("Hello " + name + ". Please enter your monthly salary: ");
+        salary = scan.nextInt();
+        System.out.println();
+
+        System.out.print("What is the total amount of your loan? ");
+        loan_principal = scan.nextInt();
+        System.out.print("What is the interest rate of your loan? ");
+        loan_interest = scan.nextDouble() / 100;
+        new_principal = loan_principal * Math.pow(1 + (loan_interest / 12), 12);
+        System.out.println();
